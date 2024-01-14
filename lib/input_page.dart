@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
 import './components/reusable_card.dart';
+import './components/card_content.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 const activeCardColor = Color(0xFF1D1E33);
 const bottomContainerHeight = 80.0;
+const bottomContainerColor = Color(0xFFEB1555);
 
 class InputPage extends StatefulWidget {
   const InputPage({super.key});
@@ -28,11 +31,18 @@ class _InputPageState extends State<InputPage> {
                 Expanded(
                   child: ReusableCard(
                     colour: activeCardColor,
+                    cardChild: CardContent(
+                      cardIcon: FontAwesomeIcons.mars,
+                      cardTitle: 'MALE',
+                    ),
                   ),
                 ),
                 Expanded(
                   child: ReusableCard(
                     colour: activeCardColor,
+                    cardChild: CardContent(
+                        cardTitle: 'FEMALE',
+                        cardIcon: FontAwesomeIcons.mercury),
                   ),
                 ),
               ],
@@ -60,7 +70,7 @@ class _InputPageState extends State<InputPage> {
             ),
           ),
           Container(
-            color: const Color(0xFFEB1555),
+            color: bottomContainerColor,
             width: double.infinity,
             height: bottomContainerHeight,
           ),
