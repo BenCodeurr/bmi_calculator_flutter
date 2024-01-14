@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'constants.dart';
 
 class CardContent extends StatelessWidget {
   const CardContent(
@@ -19,13 +20,7 @@ class CardContent extends StatelessWidget {
         const SizedBox(
           height: 15.0,
         ),
-        Text(
-          cardTitle,
-          style: const TextStyle(
-            fontSize: 18.0,
-            color: Color(0xFF8D8E98),
-          ),
-        )
+        Text(cardTitle, style: kTitleTextStyle),
       ],
     );
   }
